@@ -1,0 +1,160 @@
+    /* People may see the font we use without having it installed */
+    @font-face {
+        font-family: 'MacondoSwashCaps';
+        src: url('assets/fonts/MacondoSwashCaps-Regular.ttf');
+    }
+
+    /* Makes the whole page into a flexbox */
+    body {
+        display: flex;
+        flex-direction: column;   /* Decide the direction the flexbox should go */;
+            font-family: 'Montserrat', 'sans-serif';
+            font-size: 1.5rem;
+        }
+
+    header {
+        background-image: url(assets/img/rainforest-river.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;     /* The background-image covers the whole page in width */
+        background-position: center;
+        position: relative;
+        height: 90vh;
+        display: flex;
+        
+    }
+    header>div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-height: 3em;
+        transform:translate(-50%, -50%);
+        background-color: white;    /* For the white box behind the text */
+        opacity: 0.7;
+}
+    h1 {
+        font-family: 'MacondoSwashCaps', 'Arial, Helvetica, sans-serif';
+        text-align: center;
+        font-size: 3em;
+        padding: 1em;
+        margin: auto;
+    }
+
+    #newsletter-introduction {
+        text-align: center;
+        padding: 5%;            
+        }
+        
+    #newsletter-introduction h2 {
+        font-family: 'MacondoSwashCaps', 'Arial, Helvetica, sans-serif';
+        word-spacing: 0.1em;
+        text-transform: capitalize;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+    #newsletter-introduction ul {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.9em;
+        list-style: none;
+    }
+
+    #newsletter-introduction ul li:before, #newsletter-introduction ul li:after {
+        content: "***";     /* Makes the asterixes in front of the text */
+        font-weight: bolder;
+        font-size: 0.8rem;
+        color: darkgray;
+   
+    }
+    .text-article p::first-letter {
+        font-weight: bold;
+        font-size: 2em;
+    }
+    .text-article p::first-line {
+        font-weight: bold;
+        color: #215502;
+    }
+    article > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-box {
+        background-color: white;    /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom, #eff5ef, #bfd9bf);
+        box-shadow: 3px 3px 10px 10px #1d1d1d;
+        border-radius: 1em;
+        margin: 0 15%;
+        position: relative;
+        bottom: 15vh;
+        padding: 5%;
+    }
+
+    div {
+        display: block;
+    }
+
+    .text-article {
+        max-width: 40%;     /* The maximum width to the text */
+        font-family: 'Arial, Helvetica, sans-serif';
+        text-align: justify;
+        flex: 0 0 45%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        flex-direction: column;     /* Makes the flexbox into an column */
+    }
+
+    figure {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    figure {
+        flex: 0 0 45%;      /* Two columns 45% each*/
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+     /* We use @media for mobile-friendly webpages */
+    @media screen and (max-width: 960px){
+header { 
+    height: 40vh;
+    }
+    header>div { 
+    width: 70vw;
+    }
+    .main-box { 
+    margin-left: 5%;
+    margin-right: 5%;
+    bottom: 10vh;
+    }
+}
+    @media screen and (max-width: 600px){
+    body { 
+    font-size: 1.2rem;
+}
+    header { 
+    height: 30vh;
+}
+    header>div { 
+    width: 90vw;
+}
+    .main-box { 
+    bottom: 1vh; 
+    margin-left: 1%;
+    margin-right: 1%;
+    box-shadow: none;
+} 
+.text-article, figure {
+order: 1;
+}  
+}
+
